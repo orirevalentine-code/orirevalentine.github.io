@@ -115,6 +115,31 @@
       <h2>Projects</h2>
       <p class="sub">Things I've built on my own time.</p>
 
+      <!-- LoadPath -->
+      <article class="project">
+        <img src="loadpath.png" alt="LoadPath level 6: an 80 kN truck crossing a 24 m truss bridge with a mid pier, members colour-coded by utilization and dashed where in compression">
+        <div class="body">
+          <h3>LoadPath</h3>
+          <div class="pitch">A bridge-building game running real structural analysis in the browser.</div>
+          <p>This is where my two worlds meet. You build a truss bridge on a budget, then drive a truck across it. Every design is checked the way an engineer would check it: a direct-stiffness truss solver I wrote runs the truck across the whole span, and if a member is overloaded the bridge comes down.</p>
+          <ul>
+            <li>Direct stiffness method from scratch: global stiffness matrix, LU factorization, member forces at every truck position</li>
+            <li>Member checks with φ = 0.9: yield in tension, AISC 360 column curve for buckling, AISC H1-1 combined axial and bending on the deck</li>
+            <li>Deflection limit of span/400 on the later levels, so stiffness matters, not just strength</li>
+            <li>Members colour-coded by utilization, with tension and compression shown, and a collapse simulation when something fails</li>
+            <li>6 levels, from an 8 m gap with a 30 kN van to a 24 m span with a pier and an 80 kN truck</li>
+            <li>Stars for matching par, the cheapest passing design found, so lean, realistic designs score best</li>
+            <li>Built-in truss guide (Pratt, Howe, Warren, K, deck, bowstring) with force diagrams solved live</li>
+          </ul>
+          <div class="stack">
+            <span>JavaScript</span><span>HTML Canvas</span><span>Structural analysis</span>
+          </div>
+          <div class="links">
+            <a class="btn primary" href="loadpath/">Play it</a>
+          </div>
+        </div>
+      </article>
+
       <!-- SquishSip -->
       <article class="project">
         <img src="squishsip.png" alt="SquishSip app showing Mochi, the hydration companion, with water logging buttons and a daily progress bar">
@@ -159,31 +184,6 @@
           </div>
           <div class="links">
             <a class="btn primary" href="https://fuel-one-dun.vercel.app" target="_blank" rel="noopener">Try it live</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- LoadPath -->
-      <article class="project">
-        <img src="loadpath.png" alt="LoadPath level 6: an 80 kN truck crossing a 24 m truss bridge with a mid pier, members colour-coded by utilization and dashed where in compression">
-        <div class="body">
-          <h3>LoadPath</h3>
-          <div class="pitch">A bridge-building game running real structural analysis in the browser.</div>
-          <p>This is where my two worlds meet. You build a truss bridge on a budget, then drive a truck across it. Every design is checked the way an engineer would check it: a direct-stiffness truss solver I wrote runs the truck across the whole span, and if a member is overloaded the bridge comes down.</p>
-          <ul>
-            <li>Direct stiffness method from scratch: global stiffness matrix, LU factorization, member forces at every truck position</li>
-            <li>Member checks with φ = 0.9: yield in tension, AISC 360 column curve for buckling, AISC H1-1 combined axial and bending on the deck</li>
-            <li>Deflection limit of span/400 on the later levels, so stiffness matters, not just strength</li>
-            <li>Members colour-coded by utilization, with tension and compression shown, and a collapse simulation when something fails</li>
-            <li>6 levels, from an 8 m gap with a 30 kN van to a 24 m span with a pier and an 80 kN truck</li>
-            <li>Stars for matching par, the cheapest passing design found, so lean, realistic designs score best</li>
-            <li>Built-in truss guide (Pratt, Howe, Warren, K, deck, bowstring) with force diagrams solved live</li>
-          </ul>
-          <div class="stack">
-            <span>JavaScript</span><span>HTML Canvas</span><span>Structural analysis</span>
-          </div>
-          <div class="links">
-            <a class="btn primary" href="loadpath/">Play it</a>
           </div>
         </div>
       </article>
